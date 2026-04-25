@@ -52,7 +52,10 @@ export const AuthForm: React.FC = () => {
       <Card className="w-full max-w-md bg-white/80 dark:bg-gray-900/80">
         <div className="flex justify-center mb-8">
           <div className="relative">
-            <div className="absolute -inset-1 bg-gradient-to-r from-indigo-500 to-purple-500 rounded-full blur opacity-75"></div>
+            <div 
+              className="absolute -inset-1 rounded-full blur opacity-75"
+              style={{ background: 'linear-gradient(to right, #6366f1, #a855f7)' }}
+            ></div>
             <div className="relative bg-white dark:bg-gray-800 p-4 rounded-full">
               <LogIn className="w-8 h-8 text-brand-primary" />
             </div>
