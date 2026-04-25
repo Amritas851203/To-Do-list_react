@@ -1,5 +1,5 @@
 import React from 'react';
-import { motion } from 'framer-motion';
+
 import type { Task } from '../../types';
 import { Card } from '../ui/Card';
 import { CheckCircle2, Circle, Clock, Trash2 } from 'lucide-react';

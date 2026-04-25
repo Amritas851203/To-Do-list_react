@@ -9,7 +9,7 @@ import {
 import { doc, setDoc } from 'firebase/firestore';
 import { Button } from '../ui/Button';
 import { Card } from '../ui/Card';
-import { LogIn, UserPlus, Mail, Lock, User } from 'lucide-react';
+import { LogIn, Mail, Lock, User } from 'lucide-react';
 
 export const AuthForm: React.FC = () => {
   const [isLogin, setIsLogin] = useState(true);

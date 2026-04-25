@@ -19,7 +19,7 @@ import {
 import { MOTIVATIONAL_QUOTES, SUGGESTIONS } from '../../utils/routineData';
 
 import { format } from 'date-fns';
-import type { Task, Category, Priority } from '../../types';
+import type { Category, Priority } from '../../types';
 
 export const Dashboard: React.FC = () => {
   const { userProfile } = useAuth();
