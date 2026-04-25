@@ -79,7 +79,7 @@ export const Dashboard: React.FC = () => {
         {/* Left Column: Stats & Progress */}
         <div className="space-y-6">
           {/* Progress Card */}
-          <Card className="bg-gradient-to-br from-brand-primary to-brand-secondary text-white border-none">
+          <Card className="bg-gradient-to-br from-indigo-500 to-purple-500 text-white border-none">
             <div className="flex items-center justify-between mb-4">
               <h3 className="font-bold text-xl">Today's Progress</h3>
               <BarChart3 className="w-6 h-6 opacity-80" />
