@@ -82,10 +82,11 @@ export const TaskAnalytics: React.FC = () => {
                   <Cell key={`cell-${index}`} fill={isEmpty ? '#cbd5e1' : COLORS[index % COLORS.length]} />
                 ))}
               </Pie>
-              <Tooltip 
-                disabled={isEmpty}
-                contentStyle={{ borderRadius: '12px', border: 'none', boxShadow: '0 10px 15px -3px rgb(0 0 0 / 0.1)' }}
-              />
+              {!isEmpty && (
+                <Tooltip 
+                  contentStyle={{ borderRadius: '12px', border: 'none', boxShadow: '0 10px 15px -3px rgb(0 0 0 / 0.1)' }}
+                />
+              )}
               {!isEmpty && <Legend />}
             </PieChart>
           </ResponsiveContainer>
@@ -107,11 +108,12 @@ export const TaskAnalytics: React.FC = () => {
             <BarChart data={completionData}>
               <XAxis dataKey="name" axisLine={false} tickLine={false} tick={{ fill: '#94a3b8' }} />
               <YAxis allowDecimals={false} axisLine={false} tickLine={false} tick={{ fill: '#94a3b8' }} />
-              <Tooltip 
-                disabled={isEmpty}
-                cursor={{ fill: 'rgba(99, 102, 241, 0.05)' }}
-                contentStyle={{ borderRadius: '12px', border: 'none', boxShadow: '0 10px 15px -3px rgb(0 0 0 / 0.1)' }}
-              />
+              {!isEmpty && (
+                <Tooltip 
+                  cursor={{ fill: 'rgba(99, 102, 241, 0.05)' }}
+                  contentStyle={{ borderRadius: '12px', border: 'none', boxShadow: '0 10px 15px -3px rgb(0 0 0 / 0.1)' }}
+                />
+              )}
               <Bar dataKey="count" radius={[6, 6, 0, 0]} opacity={isEmpty ? 0.2 : 1}>
                 {completionData.map((_entry, index) => (
                   <Cell key={`cell-${index}`} fill={isEmpty ? '#cbd5e1' : (index === 0 ? '#10b981' : '#f59e0b')} />
