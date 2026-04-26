@@ -11,9 +11,10 @@ interface CardProps {
   children: React.ReactNode;
   className?: string;
   is3D?: boolean;
+  style?: React.CSSProperties;
 }
 
-export const Card: React.FC<CardProps> = ({ children, className, is3D = true }) => {
+export const Card: React.FC<CardProps> = ({ children, className, is3D = true, style }) => {
   return (
     <motion.div
       initial={{ opacity: 0, y: 20 }}
@@ -23,6 +24,7 @@ export const Card: React.FC<CardProps> = ({ children, className, is3D = true }) 
         'glass rounded-2xl p-6 transition-all duration-300 card-3d',
         className
       )}
+      style={style}
     >
       {children}
     </motion.div>
